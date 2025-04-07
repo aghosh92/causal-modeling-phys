@@ -15,6 +15,9 @@ Oak Ridge National Laboratory
 Email: research.aghosh@gmail.com  
 GitHub: [@aghosh92](https://github.com/aghosh92)
 
+## Related publication
+
+
 ## Project Structure
 The project is organized as follows:
 
