@@ -6,6 +6,8 @@ This repository provides tools for:
     --Falsifiability Tests: Perform refutability tests to validate the causal model,
     --Causal Interventions: Conduct targeted interventions for design purposes,
     --Physical Constraints Evaluation: Evaluate constraints to uncover causal mechanisms in material physics.
+It is implemented to find atomistic mechanisms behind reducing swithcing barrier of hybrid improper ferroelectrics. 
+
 ## Author
 
 Ayana Ghosh  
