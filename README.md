@@ -37,8 +37,7 @@ The project is organized as follows:
 
     --functions.py: Contains all utility functions 
 
-  outputs/: Store all the output files generated during the execution of the scripts. It includes
-  generated plots from causal models, interventions, datasets and results of refutability tests
+  outputs/: Store all the output files generated during the execution of the scripts.
 
 ## Installation & Navigation
 
