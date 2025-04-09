@@ -29,11 +29,11 @@ The project is organized as follows:
 
   scripts/: Key files in this folder include:
 
-    --build_models.py: The main script where causal models are created, and refutability tests are performed
+    --build_models.py: The main script to build causal models & perform refutability tests
 
     --perform_interv.py: Script to perform causal interventions
 
-    --functions.py: Contains utility functions for performing causal modeling, visualizations, and refutability tests
+    --functions.py: Contains all utility functions 
 
   outputs/: Store all the output files generated during the execution of the scripts. It includes
   generated plots from causal models, interventions, datasets and results of refutability tests
