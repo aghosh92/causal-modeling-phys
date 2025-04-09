@@ -11,9 +11,7 @@ It is implemented to find atomistic mechanisms behind reducing swithcing barrier
 ## Author
 
 Ayana Ghosh  
-Oak Ridge National Laboratory  
 Email: research.aghosh@gmail.com  
-GitHub: [@aghosh92](https://github.com/aghosh92)
 
 ## Related publication
 
