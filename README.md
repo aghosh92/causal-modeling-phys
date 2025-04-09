@@ -2,10 +2,12 @@
 This repository provides tools for:
 
     --Causal Modeling (Causal Discovery): Discover cause-effect relationships in datasets,
-    --Feature Selection: Select features based on the strength of causal connections, with optional domain-specific context,
+    --Feature Selection: Select features based on the strength of causal connections, 
+        with optional domain-specific context,
     --Falsifiability Tests: Perform refutability tests to validate the causal model,
     --Causal Interventions: Conduct targeted interventions for design purposes,
-    --Physical Constraints Evaluation: Evaluate constraints to uncover causal mechanisms in material physics.
+    --Physical Constraints Evaluation: Evaluate constraints to uncover 
+        causal mechanisms in material physics.
 It is implemented to find atomistic mechanisms behind reducing swithcing barrier of hybrid improper ferroelectrics. 
 
 ## Author
