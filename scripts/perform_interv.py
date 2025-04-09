@@ -29,7 +29,8 @@ selected_features = [
 
 # Standardize the selected features
 df_gp_I_std = df_gp_I.copy()  # Make a copy of the original DataFrame
-df_gp_I_std[selected_features] = (df_gp_I[selected_features] - df_gp_I[selected_features].mean()) / df_gp_I[selected_features].std()
+df_gp_I_std[selected_features] = (df_gp_I[selected_features] - 
+                                    df_gp_I[selected_features].mean()) / df_gp_I[selected_features].std()
 
 # Step 2: Create the causal model with filtered_dataset
 model, adj_matrix, pk = create_causal_model(df_filtered)
@@ -38,12 +39,17 @@ model, adj_matrix, pk = create_causal_model(df_filtered)
 feats_to_intervene = ['tilt_angle', 'rot_angle']
 
 #perform causal intervention
-intervened_X_df_sequential = causal_effect_estimation(df_gp_I_std, df_causal_gp_I_std, feats_to_intervene, model, mode='sequential',num_runs=100)
+intervened_X_df_sequential = causal_effect_estimation(df_gp_I_std, df_causal_gp_I_std, 
+                                feats_to_intervene, model, mode='sequential',num_runs=100)
 
-percent_change_rot_angle = ((intervened_X_df_sequential['rot_angle'] - df_causal_gp_I_std['rot_angle']) / df_causal_gp_I_std['rot_angle'])*100
-percent_change_tilt_angle = ((intervened_X_df_sequential['tilt_angle'] - df_causal_gp_I_std['tilt_angle']) / df_causal_gp_I_std['tilt_angle'])*100
-percent_change_Adis = ((intervened_X_df_sequential['Adis '] - df_causal_gp_I_std['Adis ']) / df_causal_gp_I_std['Adis '])*100
-percent_change_switching = ((intervened_X_df_sequential['intervened_target'] - df_causal_gp_I_std['target']) / df_causal_gp_I_std['target'])*100
+percent_change_rot_angle = ((intervened_X_df_sequential['rot_angle'] - \
+    df_causal_gp_I_std['rot_angle']) / df_causal_gp_I_std['rot_angle'])*100
+percent_change_tilt_angle = ((intervened_X_df_sequential['tilt_angle'] - \
+                            df_causal_gp_I_std['tilt_angle']) / df_causal_gp_I_std['tilt_angle'])*100
+percent_change_Adis = ((intervened_X_df_sequential['Adis '] - df_causal_gp_I_std['Adis ']) / \
+                        df_causal_gp_I_std['Adis '])*100
+percent_change_switching = ((intervened_X_df_sequential['intervened_target'] - \
+                            df_causal_gp_I_std['target']) / df_causal_gp_I_std['target'])*100
 
 avg_change_angles = (percent_change_rot_angle + percent_change_tilt_angle) / 2
 
